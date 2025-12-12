@@ -48,6 +48,12 @@ const getNeighbours = (coordinates) => {
   return neighboursXY.filter(validCoordinates);
 };
 
+const logPath = (path) => {
+  const nMoves = path.length - 1;
+  console.log(`You made it in ${nMoves} moves! Here's your path:`);
+  path.forEach(move => console.log(move));
+}
+
 const knightMoves = (start, end) => {
   const [xStart, yStart] = start;
   const [xEnd, yEnd] = end;
@@ -84,7 +90,7 @@ const knightMoves = (start, end) => {
     tmp.neighbours.forEach((node) => queue.push(node));
   }
 
-  console.log(finalPath);
+  logPath(finalPath);
 };
 
-knightMoves([0,0], [7,7]);
+knightMoves([3,3], [4,3]);
