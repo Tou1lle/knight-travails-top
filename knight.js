@@ -25,12 +25,12 @@ const board = [
   [0,1,2,3,4,5,6,7]
 ];
 
-function validCoordinates(coordinates) {
+const validCoordinates = (coordinates) => {
   const [x,y] = coordinates;
   return ((x >= 0 && x <= 7) && (y >= 0 && y <= 7)) ? true : false;
 }
 
-function getNeighbours(coordinates) {
+const getNeighbours = (coordinates) => {
   const neighboursXY = [];
   const [x,y] = coordinates;
   neighboursXY.push([x+2, y+1],
