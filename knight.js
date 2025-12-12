@@ -56,7 +56,6 @@ const logPath = (path) => {
 
 const knightMoves = (start, end) => {
   const [xStart, yStart] = start;
-  const [xEnd, yEnd] = end;
   const finalPath = [];
   const current = new Node([xStart, yStart], null);
   const neighbourCoordinates = getNeighbours(current.position);
