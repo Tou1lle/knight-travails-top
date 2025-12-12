@@ -30,5 +30,17 @@ function validCoordinates(coordinates) {
   return ((x >= 0 && x <= 7) && (y >= 0 && y <= 7)) ? true : false;
 }
 
-console.log(validCoordinates([3,7]));
-console.log(validCoordinates([3,8]));
+function getNeighbours(coordinates) {
+  const neighboursXY = [];
+  const [x,y] = coordinates;
+  neighboursXY.push([x+2, y+1],
+                    [x+2, y-1],
+                    [x+1, y+2],
+                    [x+1, y-2],
+                    [x-2, y+1],
+                    [x-2, y-1],
+                    [x-1, y+2],
+                    [x-1, y-2]
+  )
+  return neighboursXY.filter(validCoordinates);
+}
