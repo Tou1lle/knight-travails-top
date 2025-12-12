@@ -9,6 +9,10 @@ class Node {
     this.neighbours = neighbours;
   }
 
+  addNeighbour(node) {
+    this.neighbours.push(node);
+  }
+
   get position() { return this.#position; }
   get neighbours() { return this.#neighbours; }
   get predecessor() { return this.#predecessor; }
