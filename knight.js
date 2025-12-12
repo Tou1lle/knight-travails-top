@@ -13,3 +13,22 @@ destination coordinates
 -We will create a lot of objects (not really optimal)
 -The objects will probably need to be linked 
 */
+
+const board = [
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7],
+  [0,1,2,3,4,5,6,7]
+];
+
+function validCoordinates(coordinates) {
+  const [x,y] = coordinates;
+  return ((x >= 0 && x <= 7) && (y >= 0 && y <= 7)) ? true : false;
+}
+
+console.log(validCoordinates([3,7]));
+console.log(validCoordinates([3,8]));
