@@ -67,7 +67,8 @@ const knightMoves = (start, end) => {
 
   if (JSON.stringify(current.position) === JSON.stringify(end)) {
     finalPath.push(current.position);
-    return finalPath;
+    logPath(finalPath);
+    return;
   }
 
   while (finalPath.length === 0) {
